@@ -1,0 +1,32 @@
+.stats-page {
+  .menu {
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    &__heading {
+      color: #636b6f;
+    }
+    &__link {
+      text-decoration: none;
+    }
+  }
+
+  .container {
+    display: flex;
+    &__content {
+      margin: 2% 2% 15rem 2%;
+      border-radius: 3px;
+
+      flex: 1 0 46%;
+      height: 20rem;
+
+      &--shadow {
+        box-shadow: 0 .4rem .7rem rgba(0,0,0,.15);
+      }
+    }
+  }
+
+}

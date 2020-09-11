@@ -1,0 +1,133 @@
+.login-page {
+  .header {
+    position: relative;
+    background-image: linear-gradient(to left, rgba($color-primary-dark, .9), rgba($color-white, .2)), url("/img/image-1.webp");
+    height: 100vh;
+    background-size: 100%;
+
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__links {
+      margin: 3rem;
+
+    }
+    &__link {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-white;
+      font-size: 1.2rem;
+      margin: 0 .5rem;
+      transition: all .3s;
+      padding: .4rem .9rem;
+
+      &--none {
+        &:hover {
+          border-bottom: 1px solid $color-white;
+        }
+      }
+
+      &--border {
+        border: 1px solid $color-white;
+        border-radius: 3px;
+        background: transparent;
+        transition: all .3s;
+
+        &:hover {
+          background: $color-white;
+          color: $color-primary-dark;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__box {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+
+  }
+  .logo {
+    height: 8rem;
+    margin: 2rem;
+
+    &__box {
+
+    }
+  }
+}
+
+.login {
+  margin: 5rem auto;
+  width: 25%;
+
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  background-color: $color-white;
+  box-shadow: 0 2rem 4rem rgba($color-black,.15);
+  padding: 2rem;
+
+  @include respond(tab-land) {
+    width: 40%;
+  }
+  @include respond(tab-port) {
+    width: 60%;
+  }
+  @include respond(phone) {
+    width: 90%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  &__logo {
+    margin: 1rem;
+    height: 9rem;
+    padding: 2rem;
+    border-bottom: 1px solid $color-grey-dark;
+    @include respond(tab-port) {
+      height: 13rem;
+    }
+  }
+  &__input {
+    border: 3px solid $color-grey-light-2;
+    background-color: $color-grey-light-2;
+    padding: 1.2rem 1.6rem;
+    border-radius: 3px;
+    margin: 1rem;
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary-dark;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+  &__forgot-password {
+    color: $color-grey-dark;
+    text-decoration: none;
+  }
+  &__button {
+    border: none;
+    border-radius: 3px;
+    padding: 1.2rem 1.6rem;
+    background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+    margin: 1rem;
+    color: $color-grey-dark;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__with {
+    margin: 1.5rem;
+  }
+}

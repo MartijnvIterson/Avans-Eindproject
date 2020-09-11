@@ -1,0 +1,78 @@
+.roles-page {
+  .roles-block {
+    margin: 5rem;
+    &__heading{
+      text-transform: uppercase;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__content {
+      flex: 1 0 50%;
+    }
+    .card {
+      flex: 0 0 20%;
+      margin: 1rem;
+      height: auto;
+      background-color: $color-white;
+      border-radius: 3px;
+      box-shadow: 0 .4rem .8rem rgba($color-black, .15);
+      overflow: hidden;
+
+
+      &__header {
+        height: 7rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--1 {
+          background-color: #e3342f;
+        }
+      }
+      &__block {
+        border-bottom: 1px solid $color-grey-dark-2;
+      }
+      &__heading {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $color-grey-light-2;
+      }
+      &__content {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__details {
+        display: inline-block;
+      }
+      &__edit {
+        height: 1rem;
+        width: 1rem;
+        fill: #333333;
+      }
+    }
+  }
+  .block {
+    padding: 2rem 4rem;
+    display: flex;
+    &:not(:last-child) {
+      border-bottom: 1px solid #b5b5b5;
+    }
+    &__heading {
+      margin-right: auto;
+    }
+    &__price {
+
+    }
+    &__description {
+
+    }
+  }
+}

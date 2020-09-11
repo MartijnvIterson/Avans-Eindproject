@@ -1,0 +1,209 @@
+.header {
+  position: fixed;
+  width: 100%;
+  height: 8rem;
+  background-color: transparent;
+  z-index: 1000;
+  border-bottom: 1px solid transparent;
+  transition: all .5s;
+  padding: 0 2.3%;
+  color: $color-grey-light-1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 725px) {
+    position: absolute;
+  }
+
+  &__auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  &__auth-popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    box-shadow: 0 .4rem .7rem rgba(0,0,0,.15);
+    background-color: $color-white;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 25rem;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: $color-white;
+
+    &__heading {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    &__logo {
+      height: 10rem;
+      width: 10rem;
+      padding: 1rem;
+      border-bottom: 1px solid $color-grey-light-2;
+    }
+  }
+
+  &__language-flag {
+    height: 2rem;
+    width: 2rem;
+  }
+  &__language-popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    box-shadow: 0 .4rem .7rem rgba(0,0,0,.15);
+    background-color: $color-white;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+  }
+  &__language-item {
+    margin: 1rem;
+    height: 4rem;
+    width: 4rem;
+  }
+  &__language-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#fff, .7);   
+    z-index: 9999; 
+  }
+  &__logo {
+    height: 8rem;
+    padding: 1rem;
+    margin-top: -.5rem;
+    @media screen and (max-width: 725px) {
+      margin-left: -5%;
+    }
+  }
+  &__menu {
+    margin-right: 3.5%;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 725px) {
+      display: none;
+    }
+  }
+  &__heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  &__item {
+    padding: .2rem 1.5rem;
+    &--border {
+      border: 1px solid $color-grey-light-1;
+      border-radius: 5px;
+    }
+  }
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    margin-left: .8rem;
+  }
+  &__search {
+    padding: .8rem 2.6rem;
+    border-radius: 20px;
+    border: 1px solid $color-grey-light-1;
+    width: 25rem;
+    height: 3rem;
+    fill: $color-primary-light-3;
+  }
+  &__items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    margin-left: 9.5%;
+    @media screen and (max-width: 725px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  &__search-button {
+    padding: .8rem 2rem;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 1px 0 1px -1rem;
+    height: 3rem;
+    background-image: linear-gradient(125deg,
+            $color-primary-dark-1 0%,
+            $color-primary-dark-1 20%,
+            $color-primary-dark-2 20%,
+            $color-primary-dark-2 40%,
+            $color-primary-dark-3 40%,
+            $color-primary-dark-3 60%,
+            $color-primary-light-3 60%,
+            $color-primary-light-3 80%,
+            $color-primary-light-2 80%,
+            $color-primary-light-2 100%
+    );
+    color: $color-white;
+    border: none;
+  }
+}
+
+
+.header-sub {
+  top: 8rem;
+  position: fixed;
+  width: 100%;
+  height: 3rem;
+  background-color: $color-white;
+  z-index: 1000;
+  border-bottom: 1px solid $color-grey-light-1;
+  transition: all .4s;
+  padding: 0 2.3%;
+  visibility: hidden;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.header-mobile {
+  display: none;
+  position: fixed;
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 90px;
+  box-shadow: 0 .6rem .8rem rgba(0,0,0,.15);
+  background-color: $color-white;
+
+  top: 2rem;
+  right: 2rem;
+  z-index: 2000;
+
+  @media screen and (max-width: 725px) {
+    display: block;
+  }
+}

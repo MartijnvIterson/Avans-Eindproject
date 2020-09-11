@@ -1,0 +1,66 @@
+.edit-role-page {
+  .container {
+    margin: 5rem auto;
+    width: 40%;
+    overflow: hidden;
+
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 .4rem .7rem rgba($color-black, .15);
+  }
+
+  .form {
+    &__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 12rem;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    }
+    &__heading {
+      text-transform: uppercase;
+      color: $color-white;
+      font-size: 1.5rem;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem 0;
+
+      align-items: center;
+    }
+    &__label {
+      margin: 1rem 0;
+      width: 80%;
+    }
+    &__input {
+      width: 100%;
+      border-radius: 3px;
+      border: 1px solid $color-grey-dark-2;
+      padding: .6rem .4rem;
+    }
+    &__footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 12rem;
+      clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+    }
+    &__button {
+      padding: .8rem 2rem;
+      border-radius: 90px;
+      border: none;
+      text-transform: uppercase;
+      color: $color-grey-dark;
+      box-shadow: 0 .3rem .6rem rgba($color-black, .2);
+
+      background-color: $color-white;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- SEO -->
+        <title>Transportbedrijf T.A. van Iterson | Al bijna 100 jaar de specialist in transport.</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <meta name='description' content='Transportbedrijf T.A. van Iterson is een transport & logistiek dienstverlener voor zowel nationaal als internationaal goederen, pallet, walkingfloor, koel en vries transport. Gevestigd in het centraalste punt van Nederland zorgen wij elke dag weer dat onze klanten voorzien worden van een efficiënte en snelle dienstverlening.'>
+        <meta name='author' content='T.A. van Iterson Transport V.O.F.'>
+        <meta name='keywords' content='transport,transportbedrijf,nederland,utrecht,gelderland,geldermalsen,logistiek,dienstverlener,nationaal,internationaal,goederen,pallet,walkingfloor,koel,vries,centraal'>
+        <meta itemprop='name' content='Transportbedrijf T.A. van Iterson | Al bijna 100 jaar de specialist in transport.'>
+        <meta itemprop='description' content='Transportbedrijf T.A. van Iterson is een transport & logistiek dienstverlener voor zowel nationaal als internationaal goederen, pallet, walkingfloor, koel en vries transport. Gevestigd in het centraalste punt van Nederland zorgen wij elke dag weer dat onze klanten voorzien worden van een efficiënte en snelle dienstverlening.'>
+        <meta itemprop='image' content='https://iterson.net/img/image-3.webp'>
+        
+        <meta name='twitter:card' content='summary'>
+        <meta name='twitter:site' content='@ItersonTransport'>
+        <meta name='twitter:title' content='Transportbedrijf T.A. van Iterson | Al bijna 100 jaar de specialist in transport.'>
+        <meta name='twitter:description' content='Transportbedrijf T.A. van Iterson is een transport & logistiek dienstverlener voor zowel nationaal als internationaal goederen, pallet, walkingfloor, koel en vries transport. Gevestigd in het centraalste punt van Nederland zorgen wij elke dag weer dat onze klanten voorzien worden van een efficiënte en snelle dienstverlening.'>
+        <meta name='twitter:creator' content='@ItersonTransport'>
+        <meta name='twitter:image:src' content='https://iterson.net/img/image-3.webp'>
+        
+        <meta property='og:title' content='Transportbedrijf T.A. van Iterson | Al bijna 100 jaar de specialist in transport.'>
+        <meta property='og:type' content='article'>
+        <meta property='og:url' content='https://www.iterson.net'>
+        <meta property='og:description' content='Transportbedrijf T.A. van Iterson is een transport & logistiek dienstverlener voor zowel nationaal als internationaal goederen, pallet, walkingfloor, koel en vries transport. Gevestigd in het centraalste punt van Nederland zorgen wij elke dag weer dat onze klanten voorzien worden van een efficiënte en snelle dienstverlening.'>
+        <meta property='og:site_name' content='www.iterson.net'><meta property='og:image' content='https://iterson.net/img/logo.png'>
+        <meta property='og:image:secure_url' content='https://iterson.net/img/image-3.webp'>
+        <meta property='og:image:width' content='1024'>
+        <meta property='og:image:height' content='744'>
+
+        <link rel='shortcut icon' href='/img/logo.png' />
+        <link rel='apple-touch-icon' sizes='180x180' href='/img/logo.png'>
+        <link rel='mask-icon' href='/img/logo.png' color='#ffffff'>
+        
+        <meta name='msapplication-TileColor' content='#ffffff'>
+        <meta name='msapplication-TileImage' content='/img/logo.png'>
+        <meta name='theme-color' content='#ffffff'>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj3V6kjUjuYQh_90Rb0B0jh89_QV_7tF8&callback=initMap">
+        </script>
+        <script type="application/ld+json">
+            { "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "T.A. van Iterson",
+            "legalName" : "T.A. van Iterson VOF",
+            "url": "https://iterson.net",
+            "logo": "https://iterson.net/img/logo.png",
+            "foundingDate": "14-1-1996",
+            "foundingLocation": "Geldermalsen",
+            "description": "T.A. van Iterson Transport VOF | Flexibel Internationaal transportbedrijf in pallettransport, walkingfloor transport, koeltransport, vriestransport & goederentransport",
+            "founder": [
+            {
+            "@type": "Person",
+            "name": "Thijmen van Iterson"
+            } ],
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4191PD Geldermalsen De Iepenwei 8",
+            "addressLocality": "Geldermalsen",
+            "addressRegion": "Gelderland",
+            "postalCode": "4191PD",
+            "addressCountry": "NL"
+            },
+            "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "telephone": "[+31-0345-570202]",
+            "email": "info@iterson.net"
+            },
+            "sameAs": [ 
+            "https://www.instagram.com/itersontransport/",
+            "https://www.facebook.com/Transportbedrijf-TA-van-Iterson-VOF-108521520627048",
+            "http://www.twitter.com/tavaniterson"
+            ]}
+        </script>
+        <script>
+            function initMap() {
+            // The location of Uluru
+            var uluru = {lat: -25.344, lng: 131.036};
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 4, center: uluru});
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script>
+
+        <!-- Core -->
+        <link href="css/app.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <a :to="{ name: 'homePage' }">
+                <div class="header__logo">
+                    <figure class="header__logo-box">
+                        <img src="/img/logo.webp" alt="" class="header__logo">
+                    </figure>
+                </div>
+            </a>
+            <div class="header__items">
+                <svg class="header__icon">
+                    <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
+                </svg>
+                <input type="text" @keyup.enter="submitHeader" class="header__search" name="qHeader" :placeholder="text_translations['header_search_placeholder']">
+                <button @click="submitHeader" class="header__search-button">{{ text_translations['header_search'] }}</button>
+            </div>
+            <div class="header__menu">
+                <img @click="changeLanguage" class="header__language-flag" src="/img/svg/netherlands.svg" alt="Flag of the Netherlands">
+                <div class="header__item">
+                    <a href="#" class="header__link">
+                        <h4 class="header__heading">{{ text_translations['header_become_partner'] }}</h4>
+                    </a>
+                </div>
+                <div class="header__item" v-if="authenticated === false">
+                    <a href="/register" class="header__link">
+                        <h4 class="header__heading">{{ text_translations['header_sign_up'] }}</h4>
+                    </a>
+                </div>
+                <div class="header__item header__item--border" v-if="authenticated === false">
+                    <a href="/login" class="header__link">
+                        <h4 class="header__heading">{{ text_translations['header_sign_in'] }}</h4>
+                    </a>
+                </div>
+                <div class="header__item header__item--border" v-else>
+                    <a @click="userAuthenticated()" class="header__link">
+                        <h4 class="header__heading">{{ text_translations['header_dashboard'] }}</h4>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="section-heading">
+                <video class="home__background-video" autoplay muted loop id="myVideo">
+                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                </video>
+                <div class="home__background">
+                    <h3 class="home__heading">T.A. van Iterson</h3>
+                    <h4 class="home__sub-heading home__sub-heading--1">al meer dan 90 jaar specialisten in</h4>
+                    <h3 class="home__sub-heading home__sub-heading--2">(inter)nationale koel, vries, pallet<br> en walkingfloor transporten</h3>
+                </div>
+                <div class="wave"></div>
+            </section>
+            <section class="section-information">
+                <div class="information__row">
+                    <div class="information__column">
+                        <svg class="information__icon">
+                            <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
+                        </svg>
+                        <div>
+                            <h3 class="information__heading">Kwaliteit</h3>
+                            <p class="information__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nostrum voluptatum hic harum fugiat et dolor soluta voluptatem ipsum, quam nulla magnam iste commodi earum doloremque neque amet dolores at.</p>
+                        </div>
+                    </div>
+                    <div class="information__column">
+                        <svg class="information__icon">
+                            <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
+                        </svg>
+                        <div>
+                            <h3 class="information__heading">Europa</h3>
+                            <p class="information__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nostrum voluptatum hic harum fugiat et dolor soluta voluptatem ipsum, quam nulla magnam iste commodi earum doloremque neque amet dolores at.</p>         
+                        </div>
+                    </div>
+                    <div class="information__column">
+                        <svg class="information__icon">
+                            <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
+                        </svg>
+                        <div>
+                            <h3 class="information__heading">Klimaat</h3>
+                            <p class="information__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nostrum voluptatum hic harum fugiat et dolor soluta voluptatem ipsum, quam nulla magnam iste commodi earum doloremque neque amet dolores at.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-about">
+                <img src="/img/image-3.webp" alt="" class="about__image">
+                <div class="about__container">
+                    <h5 class="about__heading about__heading--1">Over ons</h5>
+                    <h2 class="about__heading about__heading--2">Snel, Flexibel en profesioneel</h2>
+                    <p class="about__paragraph">Iterson is een Transport bedrijf dat o.a fruit, groente, puin, etc. vervoert. Dit zowel in het binnen- en buitenland (Europa). Iterson Transport heeft de mogelijkheid om op bijna elke locatie te komen doormiddel van vrachtwagens en een bus. De meeste van onze vrachtwagens hebben de mogelijkheid om te koelen, zelfs onze bus heeft daarvoor de mogelijkheid. Dit alles zorgt ervoor dat wij bijna voor elk soort transport inzetbaar zijn.</p>
+                    <p class="about__paragraph">Iterson Transport is oorspronkelijk in 1921 begonnen en vervoerde toen die tijd voornamelijk vee, dit bereide zich uiteindelijk in de nieuwe generatie uit tot walkingfloor, pallet, koel & vries transport. Tegenwoordig heeft T.A. van Iterson Transport 13 voertuigen op de weg waaronder 12 vrachtwagens en 1 bus.</p>
+                </div>
+            </section>
+            <section class="section-portfolio">
+                <h3 class="portfolio__heading portfolio__heading--1">Portfolio</h3>
+                <h3 class="portfolio__heading portfolio__heading--2"><span>Onze</span> Geweldige Projecten</h3>
+                <ul class="portfolio__list">
+                    <li class="portfolio__item">All</li>
+                    <li class="portfolio__item">Walking Floor</li>
+                    <li class="portfolio__item">Koel en Vries</li>
+                    <li class="portfolio__item">On Side</li>
+                </ul>
+                <section class="section-gallery" id="portfolio">
+                    <div v-for="lists in images" class="gallery">
+                        <figure v-for="(image, index) in lists" :class="'gallery__item gallery__item--' + index">
+                            <img :srcset="'/img/image-' + image + '.webp 2000w, /img/image-' + image + '@6.webp 1000w, /img/image-' + image + '@5.webp 800w, /img/image-' + image + '@4.webp 700w, /img/image-' + image + '@3.webp 600w, /img/image-' + image + '@2.webp 500w, /img/image-' + image + '.webp 400w'" sizes="(min-width: 2000px) 2000px, (min-width: 1000px) 1000px, (min-width: 800px) 800px, (min-width: 700px) 700px, (min-width: 600px) 600px, (min-width: 500px) 500px, (min-width: 400px) 400px, 100vw" :alt="'Vrachtwagen Transportbedrijf T.A. van Iterson Transport ' + image" class="gallery__img" :src="'/img/image-' + image + '.webp'" onerror="this.srcset='';this.src='/img/image-16.webp';this.onerror=null"> 
+                        </figure>
+                    </div>
+                    <button class="btn btn--home" @click="loadImages">Laad meer afbeeldingen &rarr;</button>
+                </section>
+            </section>
+            <section class="section-partners">
+                <img src="/img/partner_grolsch.webp" alt="Grolsch" class="partners__logo">
+                <img src="/img/partner_fruitmasters.webp" alt="Fruitmasters" class="partners__logo">
+                <img src="/img/partner_appelaere.webp" alt="Appelaere" class="partners__logo">
+                <img src="/img/partner_ah.webp" alt="Appelaere" class="partners__logo">
+                <img src="/img/partner_sligro.webp" alt="Appelaere" class="partners__logo">
+            </section>
+            <section class="section-contact">
+                <div class="contact__container">
+                    <span></span>
+                    <h2 class="contact__heading contact__heading--2">Wat maakt ons speciaal</h2>
+                    <p class="contact__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, iure voluptas blanditiis veniam minima deleniti quia, nulla sunt quisquam qui fugit enim, totam doloremque adipisci! Labore voluptatem in optio! Cum.</p>
+                    <ul class="contact__list">
+                        <li class="contact__item">
+                            <svg class="contact__icon">
+                                <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
+                            </svg><p>Transport voor<br> de beste</p>
+                        </li>
+                        <li class="contact__item">
+                            <svg class="contact__icon">
+                                <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
+                            </svg><p>Transport voor<br> de beste</p>
+                        </li>
+                        <li class="contact__item">
+                            <svg class="contact__icon">
+                                <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
+                            </svg><p>Transport voor<br> de beste</p>
+                        </li>
+                        <li class="contact__item">
+                            <svg class="contact__icon">
+                                <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
+                            </svg><p>Transport voor<br> de beste</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact__form">
+                    
+                </div>
+            </section>
+        </main>
+        <footer class="footer" id="footer">
+            <svg style="height: 0; width: 0">
+                <clipPath id="wave" clipPathUnits="objectBoundingBox">
+                <path class="st0" d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z"/>
+                </clipPath>
+                <linearGradient id="webzey-gradient" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#FFB213"/>
+                    <stop offset="20%" stop-color="#FFB213"/>
+                    <stop offset="20%" stop-color="#ffc130"/>
+                    <stop offset="40%" stop-color="#ffc130"/>
+                    <stop offset="40%" stop-color="#ffca4d"/>
+                    <stop offset="60%" stop-color="#ffca4d"/>
+                    <stop offset="60%" stop-color="#ffd36b"/>
+                    <stop offset="80%" stop-color="#ffd36b"/>
+                    <stop offset="80%" stop-color="#ffd570"/>
+                    <stop offset="100%" stop-color="#ffd570"/>
+                </linearGradient>
+            </svg>
+            <div class="footer__row">
+                <figure>
+                    <img src="https://webzey.net/img/logo-light.webp" alt="" class="footer__logo">
+                </figure>
+                <div class="footer__heading">
+                    <h4 class="heading-quaternary">Vragen?</h4>
+                    <p>Neem dan contact op met onze medewerkers.</p>
+                </div>
+                <div class="footer__social footer__social--1">
+                    <svg class="footer__social-icon">
+                        <use xlink:href="/img/sprite.svg#webzey-icon-mail-checked"></use>
+                    </svg>
+                    <div class="footer__social-content">
+                        <h4 class="">Informatie</h4>
+                        <p>info@webzey.net</p>
+                    </div>
+                </div>
+                <div class="footer__social footer__social--2">
+                    <svg class="footer__social-icon">
+                        <use xlink:href="/img/sprite.svg#webzey-icon-mail-checked"></use>
+                    </svg>
+                    <div class="footer__social-content">
+                        <h4 class="">administratie</h4>
+                        <p>administratie@webzey.net</p>
+                    </div>
+                </div>
+                <div class="footer__social footer__social--3">
+                    <svg class="footer__social-icon">
+                        <use xlink:href="/img/sprite.svg#webzey-icon-discord"></use>
+                    </svg>
+                    <div class="footer__social-content">
+                        <h4 class="">Discord</h4>
+                        <p>link.webzey.net</p>
+                    </div>
+                </div>
+                <div class="footer__social footer__social--4">
+                    <svg class="footer__social-icon">
+                        <use xlink:href="/img/sprite.svg#webzey-icon-phone"></use>
+                    </svg>
+                    <div class="footer__social-content">
+                        <h4 class="">Telefoon</h4>
+                        <p style="cursor: pointer" onClick="toggleLivechat()">Klik hier</p>
+                    </div>
+                </div>
+
+                <div class="footer__newsletter">
+                    <h4 class="heading-quaternary">Meld je aan voor de nieuwsbrief</h4>
+                    <p>Ontvang het laatste nieuws.</p>
+                    <input type="text" class="newsletter__input" placeholder="E-mailadres">
+                    <button class="newsletter__button">Aanmelden</button>
+                </div>
+            </div>
+            <div class="footer__row footer__row--line">
+                <div class="footer__links">
+                    <h4 class="heading-quaternary">Contact</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Gelderland, Nederland</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">KVK {kvk_number}</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">BTW NL: {btw_number}</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">info@webzey.net</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Discord</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="heading-quaternary">Over Ons</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="/w/portfolio" class="footer__link">Portfolio</a></li>
+                        <li class="footer__item"><a href="/w/products/personal" class="footer__link">Websites</a></li>
+                        <li class="footer__item"><a href="/w/about" class="footer__link">Geschiedenis</a></li>
+                        <li class="footer__item"><a href="/w/about" class="footer__link">Over ons</a></li>
+                        <li class="footer__item"><a href="/w/sitemap" class="footer__link">Site Map</a></li>
+                     </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="heading-quaternary">Zakelijk</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a :to="{ name: 'Dashboard' }" class="footer__link">Personeelsfeesten</a>
+                        </li>
+                        <li class="footer__item">
+                            <a :to="{ name: 'Dashboard' }" class="footer__link">Zakelijk bestellen</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">zakelijk@webzey.net</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">&rarr; Meer over zakelijk</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="heading-quaternary">Sociale Media</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Instagram</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Facebook</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Twitter</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Google</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                Alle prijzen zijn incl. 21% BTW
+                <p class="copyright__links">
+                    <a href="#" class="copyright__link">Algemene voorwaarde |</a>
+                    <a href="#" class="copyright__link">Privacy |</a>
+                    <a href="#" class="copyright__link">Cookies</a>
+                </p>
+                <p class="legal">&copy; 2020 Webzey B.V. </p>
+            </div>
+
+
+        </footer>
+    </body>
+</html>

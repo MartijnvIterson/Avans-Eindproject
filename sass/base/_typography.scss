@@ -1,0 +1,112 @@
+body {
+  font-family: "Lato", Calibri;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark-3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.color-business {
+  border-color: #f8be00;
+  color: #f8be00;
+}
+.color-staff {
+  border-color: #ec3305;
+  color: #ec3305;
+}
+.color-developer {
+  border-color: #25a714;
+  color: #25a714;
+}
+.color-dark-grey {
+  color: $color-grey-dark-3;
+}
+.color-grey {
+  color: $color-grey-light-4;
+}
+.color-light-grey {
+  color: $color-grey-light-1;
+}
+.color-dark-primary {
+  color: $color-primary-dark-1 !important;
+}
+.color-primary {
+  color: $color-primary-dark-1;
+}
+.color-light-primary {
+  color: $color-primary-light-1;
+}
+.color-black {
+  color: $color-black;
+}
+.font-weight-100 {
+  font-weight: 100;
+}
+.font-weight-200 {
+  font-weight: 200;
+}
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-500 {
+  font-weight: 500;
+}
+.font-weight-600 {
+  font-weight: 600;
+}
+.font-weight-700 {
+  font-weight: 700;
+}
+
+
+
+
+.heading-primary {
+  font-size: 1rem;
+  display: inline-block;
+}
+.heading-secondary {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+.heading-tertiary {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+
+.paragraph {
+  font-size: 1.3rem;
+}
+
+
+.section-heading {
+  font-size: 3.2rem;
+  color: #000;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 3rem;
+
+  &--first {
+    margin: 5rem 0 1rem 5%;
+    font-size: 1.9rem;
+  }
+}
+
+
+.heading-tertiary {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  display: inline-block;
+}
+.paragraph {
+  font-size: 1.3rem;
+}
