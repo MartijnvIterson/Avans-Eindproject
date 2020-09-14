@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- SEO -->
-        <title>Jaap Heijmenberg | Al bijna 100 jaar de specialist in transport.</title>
+        <title>Jaap Heijmenbergg dq | Al bijna 100 jaar de specialist in transport.</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -77,17 +77,6 @@
             "http://www.twitter.com/tavaniterson"
             ]}
         </script>
-        <script>
-            function initMap() {
-            // The location of Uluru
-            var uluru = {lat: -25.344, lng: 131.036};
-            // The map, centered at Uluru
-            var map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 4, center: uluru});
-            // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({position: uluru, map: map});
-            }
-        </script>
 
         <!-- Core -->
         <link href="css/app.css" rel="stylesheet">
@@ -105,29 +94,29 @@
                 <svg class="header__icon">
                     <use xlink:href="/img/sprite.svg#webzey-icon-search"></use>
                 </svg>
-                <input type="text" @keyup.enter="submitHeader" class="header__search" name="qHeader" :placeholder="text_translations['header_search_placeholder']">
-                <button @click="submitHeader" class="header__search-button">{{ text_translations['header_search'] }}</button>
+                <input type="text" @keyup.enter="submitHeader" class="header__search" name="qHeader" placeholder="Zoek naar uw favoriete biertje">
+                <button @click="submitHeader" class="header__search-button">Zoeken</button>
             </div>
             <div class="header__menu">
-                <img @click="changeLanguage" class="header__language-flag" src="/img/svg/netherlands.svg" alt="Flag of the Netherlands">
+                <img @click="changeLanguage" class="header__language-flag" src="./img/svg/netherlands.svg" alt="Flag of the Netherlands">
                 <div class="header__item">
                     <a href="#" class="header__link">
-                        <h4 class="header__heading">{{ text_translations['header_become_partner'] }}</h4>
+                        <h4 class="header__heading">Waar te koop?</h4>
                     </a>
                 </div>
                 <div class="header__item" v-if="authenticated === false">
                     <a href="/register" class="header__link">
-                        <h4 class="header__heading">{{ text_translations['header_sign_up'] }}</h4>
+                        <h4 class="header__heading">Over ons</h4>
                     </a>
                 </div>
-                <div class="header__item header__item--border" v-if="authenticated === false">
-                    <a href="/login" class="header__link">
-                        <h4 class="header__heading">{{ text_translations['header_sign_in'] }}</h4>
+                <div class="header__item" v-if="authenticated === false">
+                    <a href="/register" class="header__link">
+                        <h4 class="header__heading">Portfolio</h4>
                     </a>
                 </div>
                 <div class="header__item header__item--border" v-else>
                     <a @click="userAuthenticated()" class="header__link">
-                        <h4 class="header__heading">{{ text_translations['header_dashboard'] }}</h4>
+                        <h4 class="header__heading">Contact</h4>
                     </a>
                 </div>
             </div>
@@ -135,12 +124,12 @@
         <main>
             <section class="section-heading">
                 <video class="home__background-video" autoplay muted loop id="myVideo">
-                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    <source src="./files/bier-video.mp4" type="video/mp4">
                 </video>
                 <div class="home__background">
-                    <h3 class="home__heading">T.A. van Iterson</h3>
-                    <h4 class="home__sub-heading home__sub-heading--1">al meer dan 90 jaar specialisten in</h4>
-                    <h3 class="home__sub-heading home__sub-heading--2">(inter)nationale koel, vries, pallet<br> en walkingfloor transporten</h3>
+                    <h3 class="home__heading">Heijmenson</h3>
+                    <h4 class="home__sub-heading home__sub-heading--1">Al meer dan 100 jaar het beste biertje uit de tap</h4>
+                    <h3 class="home__sub-heading home__sub-heading--2">Gebrouwen in 's herthogenbosch voor <br> de echte bierlovers</h3>
                 </div>
                 <div class="wave"></div>
             </section>
@@ -176,7 +165,7 @@
                 </div>
             </section>
             <section class="section-about">
-                <img src="/img/image-3.webp" alt="" class="about__image">
+                <img src="./img/header.jpg" alt="" class="about__image">
                 <div class="about__container">
                     <h5 class="about__heading about__heading--1">Over ons</h5>
                     <h2 class="about__heading about__heading--2">Snel, Flexibel en profesioneel</h2>
@@ -186,28 +175,66 @@
             </section>
             <section class="section-portfolio">
                 <h3 class="portfolio__heading portfolio__heading--1">Portfolio</h3>
-                <h3 class="portfolio__heading portfolio__heading--2"><span>Onze</span> Geweldige Projecten</h3>
+                <h3 class="portfolio__heading portfolio__heading--2"><span>Onze</span> Geweldige producten</h3>
                 <ul class="portfolio__list">
                     <li class="portfolio__item">All</li>
-                    <li class="portfolio__item">Walking Floor</li>
-                    <li class="portfolio__item">Koel en Vries</li>
-                    <li class="portfolio__item">On Side</li>
+                    <li class="portfolio__item">Tap bier</li>
+                    <li class="portfolio__item">Bottled</li>
+                    <li class="portfolio__item">Omgeving</li>
                 </ul>
                 <section class="section-gallery" id="portfolio">
-                    <div v-for="lists in images" class="gallery">
-                        <figure v-for="(image, index) in lists" :class="'gallery__item gallery__item--' + index">
-                            <img :srcset="'/img/image-' + image + '.webp 2000w, /img/image-' + image + '@6.webp 1000w, /img/image-' + image + '@5.webp 800w, /img/image-' + image + '@4.webp 700w, /img/image-' + image + '@3.webp 600w, /img/image-' + image + '@2.webp 500w, /img/image-' + image + '.webp 400w'" sizes="(min-width: 2000px) 2000px, (min-width: 1000px) 1000px, (min-width: 800px) 800px, (min-width: 700px) 700px, (min-width: 600px) 600px, (min-width: 500px) 500px, (min-width: 400px) 400px, 100vw" :alt="'Vrachtwagen Transportbedrijf T.A. van Iterson Transport ' + image" class="gallery__img" :src="'/img/image-' + image + '.webp'" onerror="this.srcset='';this.src='/img/image-16.webp';this.onerror=null"> 
+                    <div class="gallery">
+                        <figure class="gallery__item gallery__item--1">
+                            <img class="gallery__img" src="./img/bier-1.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--2">
+                            <img class="gallery__img" src="./img/bier-2.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--3">
+                            <img class="gallery__img" src="./img/bier-3.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--4">
+                            <img class="gallery__img" src="./img/bier-4.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--5">
+                            <img class="gallery__img" src="./img/bier-5.jpeg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--6">
+                            <img class="gallery__img" src="./img/bier-6.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--7">
+                            <img class="gallery__img" src="./img/bier-7.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--8">
+                            <img class="gallery__img" src="./img/bier-8.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--9">
+                            <img class="gallery__img" src="./img/bier-9.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--10">
+                            <img class="gallery__img" src="./img/bier-10.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--11">
+                            <img class="gallery__img" src="./img/bier-11.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--12">
+                            <img class="gallery__img" src="./img/bier-12.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--13">
+                            <img class="gallery__img" src="./img/bier-13.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                        </figure>
+                        <figure class="gallery__item gallery__item--14">
+                            <img class="gallery__img" src="./img/bier-14.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                     </div>
-                    <button class="btn btn--home" @click="loadImages">Laad meer afbeeldingen &rarr;</button>
                 </section>
             </section>
             <section class="section-partners">
-                <img src="/img/partner_grolsch.webp" alt="Grolsch" class="partners__logo">
-                <img src="/img/partner_fruitmasters.webp" alt="Fruitmasters" class="partners__logo">
-                <img src="/img/partner_appelaere.webp" alt="Appelaere" class="partners__logo">
-                <img src="/img/partner_ah.webp" alt="Appelaere" class="partners__logo">
-                <img src="/img/partner_sligro.webp" alt="Appelaere" class="partners__logo">
+                <img src="./img/heiniken.png" alt="Grolsch" class="partners__logo">
+                <img src="./img/sligro.png" alt="Fruitmasters" class="partners__logo">
+                <img src="./img/albert-heijn.png" alt="Appelaere" class="partners__logo">
+                <img src="./img/makro.svg" alt="Appelaere" class="partners__logo">
+                <img src="./img/grolsch.png" alt="Appelaere" class="partners__logo">
             </section>
             <section class="section-contact">
                 <div class="contact__container">
@@ -395,4 +422,16 @@
 
         </footer>
     </body>
+    <script>
+
+        function initMap() {
+        // The location of Uluru
+        var uluru = {lat: -25.344, lng: 131.036};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 4, center: uluru});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    </script>
 </html>

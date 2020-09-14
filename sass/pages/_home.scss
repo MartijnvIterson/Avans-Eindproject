@@ -22,7 +22,7 @@
     &__heading {
         font-size: 5rem;
         color: #fff;
-        font-weight: 300;
+        font-weight: 1000;
         text-transform: uppercase;
     }
     &__sub-heading {
@@ -31,16 +31,29 @@
         color: #fff;
         &--1 {
             font-weight: 400;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             margin-top: -1rem;
         }
         &--2 {
-            font-size: 3.5rem;
-            font-weight: 1000;
+            font-size: 3rem;
+            font-weight: 100;
             text-transform: uppercase;
         }
     }
 }
+.section-heading {
+    margin-top: -1rem;
+    font-size: 3.2rem;
+    color: #000;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+  
+    &--first {
+      margin: 5rem 0 1rem 5%;
+      font-size: 1.9rem;
+    }
+  }
 .section-information {
     position: relative;
     .information {
