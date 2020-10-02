@@ -48,7 +48,6 @@
     font-family: sans-serif;
     font-weight: 600;
     text-align: center;
-  
     &--first {
       margin: 5rem 0 1rem 5%;
       font-size: 1.9rem;
@@ -62,11 +61,17 @@
             padding: 8%;
             align-items: center;
             justify-content: space-between;
+            @include respond(tab-port) {
+                flex-direction: column;
+            }
         }
         &__column {
             display: flex;
             font-size: 1.6rem;
             flex: 0 0 28%;
+            @include respond(tab-port) {
+                margin-top: 1.5rem;
+            }
         }
         &__heading {
             color: #000;
@@ -83,9 +88,19 @@
     display: flex;
     align-items: center;
     width: 100%;
+    &--1 {
+        z-index: 5;
+        position: relative;
+    }
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
     .about {
         &__image {
             width: 50%;
+            @include respond(tab-port) {
+                width: 80%;
+            }
         }
         &__container {
             position: relative;
@@ -95,6 +110,9 @@
             z-index: 2;
             background-color: #fff;
             padding: 3.5rem;
+            @include respond(tab-port) {
+                width: 80%;
+            }
         }
         &__heading {
             &--1 {
@@ -122,6 +140,10 @@
     justify-content: center;
     flex-direction: column;
     padding: 0 8%;
+    &--1 {
+        z-index: 5;
+        position: relative;
+    }
     .portfolio {
         &__heading {
             &--1 {
@@ -225,109 +247,10 @@
         display: block;
     }
 }
-.section-counters {
-    margin: 7.5rem 0;
-    .counters {
-        &__row {
-            display: flex;
-            padding: 0 8%;
-            justify-content: space-around;
-            color: #000;
-        }
-      &__column {
-          display: flex;
-          flex-direction: column;
-      }
-      &__heading {
-          font-size: 3rem;
-          font-weight: 1000;
-      }
-      &__paragraph {
-          font-size: 1.6rem;
-          color: $color-grey-dark-2;
-          font-weight: 300;
-          span {
-              font-weight: 800;
-          }
-      }
-    }
-}
-.section-news {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 8% 0 8%;
-    position: relative;
-    .news {
-        &__date {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 1.5rem;
-            background-color: #fff;
-            display: block;
-            font-size: 1.4rem;
-            font-weight: 300;
-            z-index: 1;
-            color: #000;
-            border-bottom-left-radius: 5px;
-        }
-        &__heading {
-            &--1 {
-                font-size: 1.6rem;
-                color: $color-primary-dark-1;
-            }
-            &--2 {
-                color: #000;
-                font-size: 3rem;
-                margin-bottom: 2rem;
-            }
-            span {
-                font-weight: 300;   
-            }
-        }
-        &__list {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-        }
-        &__item {
-            position: relative;
-            width: 27%;
-            box-shadow: 0 .4rem .8rem rgba(0,0,0,.15);
-            border-radius: 10px;
-            overflow: hidden;
-            span {
-                position: relative;
-                display: block;
-                border-bottom: 3px solid $color-primary-dark-1;
-                width: 8rem;
-                height: 3px;
-                margin: .5rem 0 .5rem 2rem
-            }
-        }
-        &__image {
-            width: 100%;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-            margin-bottom: -2rem;
-        }
-        &__paragraph {
-            padding: 0 2rem 1rem 2rem;
-            font-size: 1.3rem;
-            font-weight: 300;
-        }
-        &__item-heading {
-            font-size: 2rem;
-            color: #000;
-            font-weight: 700;
-            padding: 2rem 1rem 0 2rem;
-        }
-    }
-}
 
 .section-partners {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
     align-items: center;
@@ -335,6 +258,10 @@
     padding: 5rem 8% 4rem 8%;
     margin-top: 6rem;
     clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+    &--1 {
+        z-index: 5;
+        position: relative;
+    }
     .partners {
         &__logo {
             height: 8rem;
@@ -347,7 +274,27 @@
     padding: 7rem 8% 20rem 8%;
     display: flex;
     align-items: center;
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+    &--1 {
+        z-index: 5;
+        position: relative;
+        background-color: $color-white;
+    }
     .contact {
+        &__heading {
+            &--1 {
+                font-size: 1.4rem;
+                color: $color-primary-dark-1;
+            }
+            &--2 {
+                font-size: 3rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: #000;
+            }
+        }
         &__list {
             display: flex;
             flex-wrap: wrap;
@@ -369,7 +316,19 @@
             background-color: #fff;
             box-shadow: 0 .4rem .8rem rgba(0,0,0,.15);
             width: 50%;
-            height: 60rem;
+            padding: 3rem 3rem 3rem 11rem;
+            @include respond(tab-port) {
+                width: 95%;
+                padding: 3rem;
+            }
+            span {
+                position: relative;
+                display: block;
+                border-bottom: 3px solid $color-primary-dark-1;
+                width: 10rem;
+                height: 3px;
+                margin: .5rem 0 .5rem 0;
+            }
         }
         &__container {
             position: relative;
@@ -379,6 +338,13 @@
             z-index: 2;
             background-color: rgb(250, 250, 250);
             padding: 3.5rem;
+            @include respond(tab-port) {
+                width: 90%;
+                padding: 2rem 0;
+            }
+            &--1 {
+                background-color: $color-white;
+            }
             span {
                 position: relative;
                 display: block;

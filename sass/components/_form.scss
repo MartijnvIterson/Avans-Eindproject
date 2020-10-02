@@ -1,96 +1,87 @@
 .form {
-  &__group:not(:last-child) {
-      margin-bottom: 2rem;
-  }
-
   &__input {
-    font-size: 1.5rem;
-    font-family: inherit;
-    color: inherit;
-    padding: 1.5rem 2rem;
-    border-radius: .2rem;
-    background-color: rgba($color-white, .5);
-    border: none;
-    border-bottom: 3px solid transparent;
-    width: 90%;
-    display: block;
-    transition: all .3s;
-
-    &::placeholder {
-      color: $color-grey-dark-2;
-    }
-
+    border: 1px solid $color-grey-light-3;
+    color: $color-grey-light-3;
+    border-radius: 5px;
+    padding: 1rem .8rem .8rem 3.5rem;
     &:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba($color-black, .1);
-      border-bottom: 3px solid $color-primary;
     }
-
-    &:focus:invalid {
-      border-bottom: 3px solid $color-secondary-dark;
+    margin: .4rem;
+    font-size: 1.6rem;
+    &:focus ~ .form__field, &:active ~ .form__field {
+      color: $color-grey-light-4;
     }
-
-
-  }
-
-  &__label {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-left: 2rem;
-    margin-top: 1.7rem;
-    display: block;
-    transition: all .3s;
-  }
-
-  &__input:placeholder-shown + &__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4rem);
-  }
-
-  &__radio {
-    &-group {
-      width: 49%;
-      display: inline-block;
-    }
-    &-input {
-      display: none;
-    }
-
-    &-label {
-      font-size: $default-font-size;
-      cursor: pointer;
-      position: relative;
-      padding-left: 5rem;
-    }
-    &-button {
-      height: 3rem;
-      width: 3rem;
-      border: 5px solid $color-primary;
-      border-radius: 50%;
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      top: -.5rem;
-
-      &::after {
-        content: "";
-        display: block;
-        height: 1.3rem;
-        width: 1.3rem;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: $color-primary;
-        opacity: 0;
-        transition: opacity .3s;
+    &:focus, &:active {
+      outline: transparent;
+      border-color: $color-grey-light-4;
+      &:invalid {
+        color: #ff3b05;
+          border-color: #ff3b05;
+          &::placeholder {
+              color: #ff3b05;
+          }
+      }
+      &:invalid ~ .form__field {
+          color: #ff3b05;
       }
     }
   }
-
-  &__radio-input:checked ~ &__radio-label &__radio-button:after {
-    opacity: 1;
+  &__group {
+    display: flex;
+    margin: 1rem 0;
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
   }
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__field {
+    margin-top: -1.3rem;
+    margin-left: 4rem;
+    background-color: #fff;
+    color: $color-grey-light-3;
+    margin-right: auto;
+    padding: 0 .8rem;
+  }
+}
+
+.btn {
+  background-image: linear-gradient(125deg,
+        $color-primary-dark-1 0%,
+        $color-primary-dark-1 20%,
+        $color-primary-dark-2 20%,
+        $color-primary-dark-2 40%,
+        $color-primary-dark-3 40%,
+        $color-primary-dark-3 60%,
+        #ffca4d 60%,
+        #ffca4d 80%,
+        #ffd570 80%,
+        #ffd570 100%
+);
+padding: .8rem 2rem;
+border-radius: 30px;
+font-weight: 600;
+font-size: 1rem;
+border: none;
+color: $color-white;
+transition: all .5s;
+box-shadow: 0 .8rem 1.6rem rgba(0,0,0,.2);
+display: flex;
+align-items: center;
+&__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: url(#webzey-gradient-light);
+    margin-right: 1rem;
+}
+&--normal {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+}
 }

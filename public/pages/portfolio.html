@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- SEO -->
-        <title>Heijmenson | Al meer dan 100 jaar het beste biertje uit de tap.</title>
+        <title>Portfolio | Heijmenson </title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -14,30 +14,30 @@
         <meta name='keywords' content='heijmenson,bier,speciaal,speciaalbier,herthogenbosch'>
         <meta itemprop='name' content='Heijmenson | Al meer dan 100 jaar het beste biertje uit de tap.'>
         <meta itemprop='description' content='Heijmenson is al meer dan 100 jaar het beste biertje uit de tap. Dit mede door ons speciale brouwproces en onze geheime ingredienten.'>
-        <meta itemprop='image' content='./img/bier-2.jpg'>
+        <meta itemprop='image' content='../img/bier-2.jpg'>
         
         <meta name='twitter:card' content='summary'>
         <meta name='twitter:site' content='@heijmenson'>
         <meta name='twitter:title' content='Heijmenson | Al meer dan 100 jaar het beste biertje uit de tap.'>
         <meta name='twitter:description' content='Heijmenson is al meer dan 100 jaar het beste biertje uit de tap. Dit mede door ons speciale brouwproces en onze geheime ingredienten.'>
         <meta name='twitter:creator' content='@heijmenson'>
-        <meta name='twitter:image:src' content='./img/bier-2.jpg'>
+        <meta name='twitter:image:src' content='../img/bier-2.jpg'>
         
         <meta property='og:title' content='Heijmenson | Al meer dan 100 jaar het beste biertje uit de tap.'>
         <meta property='og:type' content='article'>
         <meta property='og:url' content='https://heijmenson.nl'>
         <meta property='og:description' content='Heijmenson is al meer dan 100 jaar het beste biertje uit de tap. Dit mede door ons speciale brouwproces en onze geheime ingredienten.'>
-        <meta property='og:site_name' content='www.heijmenson.nl'><meta property='og:image' content='./img/bier-2.jpg'>
-        <meta property='og:image:secure_url' content='./img/bier-2.jpg'>
+        <meta property='og:site_name' content='www.heijmenson.nl'><meta property='og:image' content='../img/bier-2.jpg'>
+        <meta property='og:image:secure_url' content='../img/bier-2.jpg'>
         <meta property='og:image:width' content='1024'>
         <meta property='og:image:height' content='744'>
 
-        <link rel='shortcut icon' href='./img/logo.png' />
-        <link rel='apple-touch-icon' sizes='180x180' href='./img/logo.png'>
-        <link rel='mask-icon' href='./img/logo.png' color='#ffffff'>
+        <link rel='shortcut icon' href='../img/logo.png' />
+        <link rel='apple-touch-icon' sizes='180x180' href='../img/logo.png'>
+        <link rel='mask-icon' href='../img/logo.png' color='#ffffff'>
         
         <meta name='msapplication-TileColor' content='#ffffff'>
-        <meta name='msapplication-TileImage' content='./img/logo.png'>
+        <meta name='msapplication-TileImage' content='../img/logo.png'>
         <meta name='theme-color' content='#ffffff'>
         <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj3V6kjUjuYQh_90Rb0B0jh89_QV_7tF8&callback=initMap">
@@ -79,22 +79,22 @@
         </script>
 
         <!-- Core -->
-        <link href="css/app.css" rel="stylesheet">
+        <link href="../css/app.css" rel="stylesheet">
     </head>
     <body>
         <header class="header">
-            <a href="./index.html">
+            <a href="../index.html">
                 <div class="header__logo">
                     <figure class="header__logo-box">
-                        <img src="./img/logo.png" alt="" class="header__logo">
+                        <img src="../img/logo.png" alt="" class="header__logo">
                     </figure>
                 </div>
             </a>
             
             <div class="header__menu">
-                <img @click="changeLanguage" class="header__language-flag" src="./img/svg/netherlands.svg" alt="Flag of the Netherlands">
+                <img @click="changeLanguage" class="header__language-flag" src="../img/svg/netherlands.svg" alt="Flag of the Netherlands">
                 <div class="header__item">
-                    <a href="./pages/waar-te-koop.html" class="header__link header__hover-link">
+                    <a href="./waar-te-koop.html" class="header__link header__hover-link">
                         <h4 class="header__heading" style="padding: 3rem 0;">Waar te koop?</h4>
                     </a>
                     <div class="header__hover-block">
@@ -119,17 +119,17 @@
                     </div>
                 </div>
                 <div class="header__item" v-if="authenticated === false">
-                    <a href="./pages/over-ons" class="header__link">
+                    <a href="./over-ons.html" class="header__link">
                         <h4 class="header__heading">Over ons</h4>
                     </a>
                 </div>
                 <div class="header__item" v-if="authenticated === false">
-                    <a href="./pages/portfolio.html" class="header__link">
+                    <a href="./portfolio.html" class="header__link">
                         <h4 class="header__heading">Portfolio</h4>
                     </a>
                 </div>
                 <div class="header__item header__item--border" v-else>
-                    <a href="./pages/contact.html" class="header__link">
+                    <a href="./contact.html" class="header__link">
                         <h4 class="header__heading">Contact</h4>
                     </a>
                 </div>
@@ -147,58 +147,18 @@
         </header>
         
         <main>
-            <section class="section-heading">
+            <section class="section-heading section-heading--1">
                 <video class="home__background-video" autoplay muted loop id="myVideo">
-                    <source src="./files/bier-video.mp4" type="video/mp4">
+                    <source src="../files/bier-video.mp4" type="video/mp4">
                 </video>
                 <div class="home__background">
-                    <h3 class="home__heading">Heijmenson</h3>
-                    <h4 class="home__sub-heading home__sub-heading--1">Al meer dan 100 jaar het beste biertje uit de tap</h4>
-                    <h3 class="home__sub-heading home__sub-heading--2">Gebrouwen in 's herthogenbosch voor <br> de echte bierlovers</h3>
+                    <h3 class="home__heading">Portfolio</h3>
+                    <h4 class="home__sub-heading home__sub-heading--1">Onze geschiedenis, Onze toekomst, Onze familie</h4>
                 </div>
                 <div class="wave"></div>
             </section>
-            <section class="section-information">
-                <div class="information__row">
-                    <div class="information__column">
-                        <svg class="information__icon">
-                            <use xlink:href="./img/sprite.svg#webzey-icon-search"></use>
-                        </svg>
-                        <div>
-                            <h3 class="information__heading">Kwaliteit</h3>
-                            <p class="information__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nostrum voluptatum hic harum fugiat et dolor soluta voluptatem ipsum, quam nulla magnam iste commodi earum doloremque neque amet dolores at.</p>
-                        </div>
-                    </div>
-                    <div class="information__column">
-                        <svg class="information__icon">
-                            <use xlink:href="./img/sprite.svg#webzey-icon-search"></use>
-                        </svg>
-                        <div>
-                            <h3 class="information__heading">Europa</h3>
-                            <p class="information__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nostrum voluptatum hic harum fugiat et dolor soluta voluptatem ipsum, quam nulla magnam iste commodi earum doloremque neque amet dolores at.</p>         
-                        </div>
-                    </div>
-                    <div class="information__column">
-                        <svg class="information__icon">
-                            <use xlink:href="./img/sprite.svg#webzey-icon-search"></use>
-                        </svg>
-                        <div>
-                            <h3 class="information__heading">Klimaat</h3>
-                            <p class="information__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nostrum voluptatum hic harum fugiat et dolor soluta voluptatem ipsum, quam nulla magnam iste commodi earum doloremque neque amet dolores at.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-about">
-                <img src="./img/header.jpg" alt="" class="about__image">
-                <div class="about__container">
-                    <h5 class="about__heading about__heading--1">Over ons</h5>
-                    <h2 class="about__heading about__heading--2">Snel, Flexibel en profesioneel</h2>
-                    <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo placeat dolorum harum, sint libero voluptate, sapiente iusto expedita dolorem quidem labore voluptates eveniet ducimus, minima nostrum perspiciatis iste non laboriosam?</p>
-                    <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolor soluta a esse molestiae, necessitatibus accusantium numquam? Sit, nihil numquam? Optio adipisci repellat nesciunt repellendus dolorem quaerat error dolores doloremque?</p>
-                </div>
-            </section>
-            <section class="section-portfolio">
+            
+            <section class="section-portfolio section-portfolio--1">
                 <h3 class="portfolio__heading portfolio__heading--1">Portfolio</h3>
                 <h3 class="portfolio__heading portfolio__heading--2"><span>Onze</span> Geweldige producten</h3>
                 <ul class="portfolio__list">
@@ -210,56 +170,56 @@
                 <section class="section-gallery" id="portfolio">
                     <div class="gallery">
                         <figure class="gallery__item gallery__item--1">
-                            <img class="gallery__img" src="./img/bier-1.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-1.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--2">
-                            <img class="gallery__img" src="./img/bier-2.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-2.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--3">
-                            <img class="gallery__img" src="./img/bier-3.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-3.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--4">
-                            <img class="gallery__img" src="./img/bier-4.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-4.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--5">
-                            <img class="gallery__img" src="./img/bier-5.jpeg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-5.jpeg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--6">
-                            <img class="gallery__img" src="./img/bier-6.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-6.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--7">
-                            <img class="gallery__img" src="./img/bier-7.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-7.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--8">
-                            <img class="gallery__img" src="./img/bier-8.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-8.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--9">
-                            <img class="gallery__img" src="./img/bier-9.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-9.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--10">
-                            <img class="gallery__img" src="./img/bier-10.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-10.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--11">
-                            <img class="gallery__img" src="./img/bier-11.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-11.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--12">
-                            <img class="gallery__img" src="./img/bier-12.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-12.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--13">
-                            <img class="gallery__img" src="./img/bier-13.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-13.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                         <figure class="gallery__item gallery__item--14">
-                            <img class="gallery__img" src="./img/bier-14.jpg" onerror="this.srcset='';this.src='./img/bier-1.jpg';this.onerror=null"> 
+                            <img class="gallery__img" src="../img/bier-14.jpg" onerror="this.srcset='';this.src='../img/bier-1.jpg';this.onerror=null"> 
                         </figure>
                     </div>
                 </section>
             </section>
             <section class="section-partners">
-                <img src="./img/heiniken.png" alt="Grolsch" class="partners__logo">
-                <img src="./img/sligro.png" alt="Fruitmasters" class="partners__logo">
-                <img src="./img/albert-heijn.png" alt="Appelaere" class="partners__logo">
-                <img src="./img/makro.svg" alt="Appelaere" class="partners__logo">
-                <img src="./img/grolsch.png" alt="Appelaere" class="partners__logo">
+                <img src="../img/heiniken.png" alt="Grolsch" class="partners__logo">
+                <img src="../img/sligro.png" alt="Fruitmasters" class="partners__logo">
+                <img src="../img/albert-heijn.png" alt="Appelaere" class="partners__logo">
+                <img src="../img/makro.svg" alt="Appelaere" class="partners__logo">
+                <img src="../img/grolsch.png" alt="Appelaere" class="partners__logo">
             </section>
             <section class="section-contact">
                 <div class="contact__container">
@@ -269,22 +229,22 @@
                     <ul class="contact__list">
                         <li class="contact__item">
                             <svg class="contact__icon">
-                                <use xlink:href="./img/sprite.svg#webzey-icon-search"></use>
+                                <use xlink:href="../img/sprite.svg#webzey-icon-search"></use>
                             </svg><p>Transport voor<br> de beste</p>
                         </li>
                         <li class="contact__item">
                             <svg class="contact__icon">
-                                <use xlink:href="./img/sprite.svg#webzey-icon-search"></use>
+                                <use xlink:href="../img/sprite.svg#webzey-icon-search"></use>
                             </svg><p>Transport voor<br> de beste</p>
                         </li>
                         <li class="contact__item">
                             <svg class="contact__icon">
-                                <use xlink:href="./img/sprite.svg#webzey-icon-search"></use>
+                                <use xlink:href="../img/sprite.svg#webzey-icon-search"></use>
                             </svg><p>Transport voor<br> de beste</p>
                         </li>
                         <li class="contact__item">
                             <svg class="contact__icon">
-                                <use xlink:href="./img/sprite.svg#webzey-icon-search"></use>
+                                <use xlink:href="../img/sprite.svg#webzey-icon-search"></use>
                             </svg><p>Transport voor<br> de beste</p>
                         </li>
                     </ul>
@@ -340,7 +300,7 @@
             </svg>
             <div class="footer__row">
                 <figure>
-                    <img src="./img/logo.png" alt="" class="footer__logo">
+                    <img src="../img/logo.png" alt="" class="footer__logo">
                 </figure>
                 <div class="footer__heading">
                     <h4 class="heading-quaternary">Vragen?</h4>
@@ -348,7 +308,7 @@
                 </div>
                 <div class="footer__social footer__social--1">
                     <svg class="footer__social-icon">
-                        <use xlink:href="./img/sprite.svg#webzey-icon-mail-checked"></use>
+                        <use xlink:href="../img/sprite.svg#webzey-icon-mail-checked"></use>
                     </svg>
                     <div class="footer__social-content">
                         <h4 class="">Informatie</h4>
@@ -357,7 +317,7 @@
                 </div>
                 <div class="footer__social footer__social--2">
                     <svg class="footer__social-icon">
-                        <use xlink:href="./img/sprite.svg#webzey-icon-mail-checked"></use>
+                        <use xlink:href="../img/sprite.svg#webzey-icon-mail-checked"></use>
                     </svg>
                     <div class="footer__social-content">
                         <h4 class="">administratie</h4>
@@ -366,7 +326,7 @@
                 </div>
                 <div class="footer__social footer__social--3">
                     <svg class="footer__social-icon">
-                        <use xlink:href="./img/sprite.svg#webzey-icon-discord"></use>
+                        <use xlink:href="../img/sprite.svg#webzey-icon-discord"></use>
                     </svg>
                     <div class="footer__social-content">
                         <h4 class="">Discord</h4>
@@ -375,7 +335,7 @@
                 </div>
                 <div class="footer__social footer__social--4">
                     <svg class="footer__social-icon">
-                        <use xlink:href="./img/sprite.svg#webzey-icon-phone"></use>
+                        <use xlink:href="../img/sprite.svg#webzey-icon-phone"></use>
                     </svg>
                     <div class="footer__social-content">
                         <h4 class="">Telefoon</h4>
