@@ -95,31 +95,31 @@
                 <img @click="changeLanguage" class="header__language-flag" src="./img/svg/netherlands.svg" alt="Flag of the Netherlands">
                 <div class="header__item">
                     <a href="./pages/waar-te-koop.html" class="header__link header__hover-link">
-                        <h4 class="header__heading" style="padding: 3rem 0;">Waar te koop?</h4>
+                        <h4 class="header__heading header__heading--padding">Waar te koop?</h4>
                     </a>
                     <div class="header__hover-block">
-                        <div style="width: 14rem;">
+                        <div class="width-14">
                             <h3>Nederland</h3>
-                            <div style="display:flex; flex-wrap: wrap; justify-content: space-between;">
-                                <a style="flex: 1 0 50%">Makro</a>
-                                <a style="flex: 1 0 50%">Albert Heijn</a>
-                                <a style="flex: 1 0 50%">Jumbo</a>
-                                <a style="flex: 1 0 50%">Sligro</a>
+                            <div class="flex-1">
+                                <a class="flex-50">Makro</a>
+                                <a class="flex-50">Albert Heijn</a>
+                                <a class="flex-50">Jumbo</a>
+                                <a class="flex-50">Sligro</a>
                             </div>
                         </div>
-                        <div style="width: 14rem;margin-left: 1.5rem;">
+                        <div class="width-14 margin-15">
                             <h3>België</h3>
-                            <div style="display:flex; flex-wrap: wrap; justify-content: space-between;">
-                                <a style="flex: 1 0 50%">Sligro</a>
-                                <a style="flex: 1 0 50%">Makro</a>
-                                <a style="flex: 1 0 50%">Carrefour Market</a>
-                                <a style="flex: 1 0 50%">Lidl</a>
+                            <div class="flex-1">
+                                <a class="flex-50">Sligro</a>
+                                <a class="flex-50">Makro</a>
+                                <a class="flex-50">Carrefour Market</a>
+                                <a class="flex-50">Lidl</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="header__item" v-if="authenticated === false">
-                    <a href="./pages/over-ons" class="header__link">
+                    <a href="./pages/over-ons.html" class="header__link">
                         <h4 class="header__heading">Over ons</h4>
                     </a>
                 </div>
@@ -138,12 +138,13 @@
             <div class="header-mobile-circle"></div>
             <div class="header-mobile-block">
                 <h3>Navigatie</h3>
-                <a href="">Waar te koop?</a>
-                <a href="">Over ons</a>
-                <a href="">Portfolio</a>
-                <a href="">Contact</a>
+                <a href="./index.html">Homepage</a>
+                <a href="./pages/waar-te-koop.html">Waar te koop?</a>
+                <a href="./pages/over-ons.html">Over ons</a>
+                <a href="./pages/portfolio.html">Portfolio</a>
+                <a href="./pages/contact.html">Contact</a>
             </div>
-            <label class="header-mobile" for="nav"></label>
+            <label class="header-mobile" for="nav"><div></div></label>
         </header>
         
         <main>
@@ -296,13 +297,13 @@
                     <form action="" method="post">
                         <div class="form__group">
                             <div class="form__item">
-                                <input type="email" class="form__input">
+                                <input type="text" class="form__input">
                                 <label for="firstname" class="form__field">Naam</label>
                             </div>
                         </div>
                         <div class="form__group">
                             <div class="form__item">
-                                <input type="email" class="form__input">
+                                <input type="number" class="form__input">
                                 <label for="firstname" class="form__field">Telefoon</label>
                             </div>
                             <div class="form__item">
@@ -321,7 +322,7 @@
             </section>
         </main>
         <footer class="footer" id="footer">
-            <svg style="height: 0; width: 0">
+            <svg height=0 width=0>
                 <clipPath id="wave" clipPathUnits="objectBoundingBox">
                 <path class="st0" d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z"/>
                 </clipPath>
@@ -370,7 +371,7 @@
                     </svg>
                     <div class="footer__social-content">
                         <h4 class="">Discord</h4>
-                        <p>link.heijmenson.nl</p>
+                        <p>dc.heijmenson.nl</p>
                     </div>
                 </div>
                 <div class="footer__social footer__social--4">
@@ -379,7 +380,7 @@
                     </svg>
                     <div class="footer__social-content">
                         <h4 class="">Telefoon</h4>
-                        <p style="cursor: pointer" onClick="toggleLivechat()">Klik hier</p>
+                        <p>06-12345678</p>
                     </div>
                 </div>
 

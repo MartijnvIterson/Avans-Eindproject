@@ -8,7 +8,13 @@
   font-size: 1.4rem;
   color: $color-grey-light-2;
   z-index: 10;
+  &:hover {
+    animation-name: footer-colors;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
   @include respond(tab-port) {
+    margin-top: -25rem;
     padding: 14rem 0;
   }
 

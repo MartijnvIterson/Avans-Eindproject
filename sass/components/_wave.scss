@@ -5,4 +5,7 @@
     clip-path: url(#wave);
     margin-bottom: -70VH;
     z-index: -1;
+    &--1 {
+        margin-top: 0;
+    }
 }

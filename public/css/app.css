@@ -17,33 +17,55 @@
     - Tab land
     - Big desktop
  */
-@keyframes moveInRight {
+@keyframes footer-colors {
   0% {
-    opacity: 0;
-    transform: translateX(10rem) rotate(30deg); }
-  80% {
-    transform: translateX(-1rem); }
+    background-color: #ffa508; }
+  25% {
+    background-color: #c9a200; }
+  50% {
+    background-color: #997b00; }
   100% {
-    opacity: 1;
-    transform: translate(0) rotate(0deg); } }
+    background-color: #f7c700; } }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
+@keyframes rotate360 {
   100% {
-    opacity: 1;
-    transform: translate(0); } }
+    transform: rotate(360deg); } }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
+@keyframes skew {
   100% {
-    opacity: 1;
-    transform: translateY(0); } }
+    transform: skew(-10deg) scale(1.2); } }
+
+@keyframes rotate-360 {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1) rotate(-360deg); } }
+
+@keyframes rol-naar-rechts {
+  0% {
+    transform: translateX(0%), rotate(-360deg); }
+  10% {
+    transform: translateX(60%), rotate(-360deg); }
+  20% {
+    transform: translateX(120%), rotate(-360deg); }
+  30% {
+    transform: translateX(180%), rotate(-360deg); }
+  40% {
+    transform: translateX(240%), rotate(-360deg); }
+  50% {
+    transform: translateX(300%) rotate(360deg); }
+  60% {
+    transform: scale(1.1); }
+  70% {
+    transform: scale(0.9); }
+  80% {
+    transform: scale(1.3); }
+  90% {
+    transform: scale(0.8); }
+  100% {
+    transform: translateX(0%) scale(1); } }
 
 *,
 *::after,
@@ -158,32 +180,19 @@ a {
 .paragraph {
   font-size: 1.3rem; }
 
-.u-center-text {
-  text-align: center !important; }
+.flex-50 {
+  flex: 1 0 50%; }
 
-.u-margin-bottom-big {
-  margin-bottom: 8rem !important; }
-  @media only screen and (max-width: 56.25em) {
-    .u-margin-bottom-big {
-      margin-bottom: 5rem !important; } }
+.width-14 {
+  width: 14rem; }
 
-.u-margin-bottom-medium {
-  margin-bottom: 5rem !important; }
-  @media only screen and (max-width: 56.25em) {
-    .u-margin-bottom-medium {
-      margin-bottom: 3rem !important; } }
+.margin-15 {
+  margin-left: 1.5rem; }
 
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem !important; }
-
-.u-margin-top-big {
-  margin-top: 8rem !important; }
-
-.u-margin-top-huge {
-  margin-top: 10rem !important; }
-
-.u-margin-top-small {
-  margin-top: 1.5rem !important; }
+.flex-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .composition {
   position: relative; }
@@ -242,6 +251,8 @@ a {
   clip-path: url(#wave);
   margin-bottom: -70VH;
   z-index: -1; }
+  .wave--1 {
+    margin-top: 0; }
 
 .form__input {
   border: 1px solid #BFBFBF;
@@ -321,8 +332,13 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center; }
+  .footer:hover {
+    animation-name: footer-colors;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; }
   @media only screen and (max-width: 56.25em) {
     .footer {
+      margin-top: -25rem;
       padding: 14rem 0; } }
   .footer__row {
     margin: 3rem auto;
@@ -522,9 +538,12 @@ a {
     background-color: rgba(255, 255, 255, 0.7);
     z-index: 9999; }
   .header__logo {
-    height: 8rem;
+    height: 12rem;
     padding: 1rem;
     margin-top: -.5rem; }
+    .header__logo:hover {
+      animation-name: rol-naar-rechts;
+      animation-duration: 10s; }
     @media screen and (max-width: 725px) {
       .header__logo {
         margin-left: -5%; } }
@@ -538,6 +557,8 @@ a {
   .header__heading {
     font-size: 1.2rem;
     font-weight: 500; }
+    .header__heading--padding {
+      padding: 3rem 0; }
   .header__item {
     padding: .2rem 1.5rem; }
     .header__item--border {
@@ -606,9 +627,38 @@ a {
   top: 2rem;
   right: 2rem;
   z-index: 2000; }
+  .header-mobile:hover {
+    animation-name: rotate-360;
+    animation-duration: 2s; }
   @media screen and (max-width: 725px) {
     .header-mobile {
       display: block; } }
+  .header-mobile div {
+    margin: 2.8rem auto 0 auto;
+    position: relative;
+    width: 50%;
+    height: .1rem;
+    border-radius: 90px;
+    background-color: #000; }
+    .header-mobile div::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      width: 100%;
+      height: .1rem;
+      border-radius: 90px;
+      background-color: #000;
+      transition: transform .5s; }
+    .header-mobile div::after {
+      content: "";
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      width: 100%;
+      height: .1rem;
+      border-radius: 90px;
+      background-color: #000;
+      transition: transform .5s; }
 
 .header-mobile-circle {
   position: fixed;
@@ -649,6 +699,19 @@ a {
 .header-mobile-validation:checked ~ .header-mobile-circle {
   transform: scale(100); }
 
+.header-mobile-validation:checked ~ .header-mobile div {
+  height: 0; }
+  .header-mobile-validation:checked ~ .header-mobile div::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); }
+  .header-mobile-validation:checked ~ .header-mobile div::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg); }
+
 .header-mobile-validation:checked ~ .header-mobile-block {
   top: 50%;
   left: 50%;
@@ -666,6 +729,14 @@ a {
   flex-direction: column;
   margin-top: calc(-115vh + 9.5rem);
   z-index: -2; }
+  @media only screen and (max-width: 56.25em) {
+    .home__background {
+      height: 50vh;
+      background-image: linear-gradient(to right top, rgba(235, 235, 235, 0.5), rgba(255, 178, 19, 0.9)), url(../img/bier-1.jpg); } }
+  .home__background--image {
+    background-size: 200%;
+    background-image: linear-gradient(to right top, rgba(235, 235, 235, 0.5), rgba(255, 178, 19, 0.9)), url(../img/bier-1.jpg);
+    margin-top: 0; }
 
 .home__background-video {
   position: relative;
@@ -673,6 +744,10 @@ a {
   width: 100%;
   margin-top: -10rem;
   z-index: -3; }
+  @media only screen and (max-width: 56.25em) {
+    .home__background-video {
+      margin-top: -40rem;
+      margin-bottom: 30rem; } }
 
 .home__heading {
   font-size: 5rem;
@@ -851,6 +926,9 @@ a {
     height: 100%;
     object-fit: cover;
     display: block; }
+    .gallery__img:hover {
+      animation-name: skew;
+      animation-duration: 3s; }
 
 .section-partners {
   display: flex;
@@ -868,6 +946,9 @@ a {
   .section-partners .partners__logo {
     height: 8rem;
     width: auto; }
+    .section-partners .partners__logo:hover {
+      animation-name: rotate360;
+      animation-duration: 2s; }
 
 .section-contact {
   background-color: #fafafa;

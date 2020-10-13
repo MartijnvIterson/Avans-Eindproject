@@ -11,6 +11,16 @@
         flex-direction: column;
         margin-top: calc(-115vh + 9.5rem);
         z-index: -2;
+        @include respond(tab-port) {
+            height: 50vh;
+            background-image:  linear-gradient(to right top, rgba($color-primary-light-1,.5), rgba($color-primary-dark-1,.9)), url(../img/bier-1.jpg);
+         }
+         &--image {
+             background-size: 200%;
+            background-image:  linear-gradient(to right top, rgba($color-primary-light-1,.5), rgba($color-primary-dark-1,.9)), url(../img/bier-1.jpg);
+            margin-top: 0;
+         }
+        
     }
     &__background-video {
         position: relative;
@@ -18,6 +28,10 @@
         width: 100%;
         margin-top: -10rem;
         z-index: -3;
+        @include respond(tab-port) {
+            margin-top: -40rem;
+            margin-bottom: 30rem;
+         }
     }
     &__heading {
         font-size: 5rem;
@@ -245,6 +259,10 @@
         height: 100%;
         object-fit: cover;
         display: block;
+        &:hover {
+            animation-name: skew;
+            animation-duration:3s;
+        }
     }
 }
 
@@ -266,6 +284,10 @@
         &__logo {
             height: 8rem;
             width: auto;
+            &:hover {
+                animation-name: rotate360;
+                animation-duration: 2s;
+            }
         }
     }
 }
