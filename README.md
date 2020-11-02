@@ -1,2 +1,2 @@
 # Avans-Eindproject
-Dit is het AVANS Eindproject voor WEBS1
+Dit is het AVANS Eindproject voor WEBS2
